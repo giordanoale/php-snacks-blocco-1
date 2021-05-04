@@ -26,10 +26,10 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti
 <body>
     
     <h1> 
-    <?php if (strlen($name) > 3 && strpos(".", $email) && strpos("@", $email) && is_numeric($age)) {
+    <?php if (strlen($name) > 3 && strpos($email, '.') !== false && strpos($email, '@') !== false && is_numeric($age)) {
         echo "Accesso Riuscito";
     } else {
-        echo "Accesso negato";
+        echo "Accesso Negato";
     }
     ?> 
     </h1>
